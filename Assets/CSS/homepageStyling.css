@@ -8,6 +8,11 @@
 /* Roboto Serif */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 
+
+.showNothing{
+    display: none;
+}
+
 /* Variables */
 
 :root{
@@ -357,7 +362,6 @@ main .hero .text-hero {
     position: absolute;
     margin-left: 5.5%;
     padding-bottom: 5%;
-    /* background-color: red; */
 }
 main .hero .text-hero h1 {
     max-width: 800px;
@@ -383,9 +387,22 @@ main .hero .text-hero h2 {
 main .hero .text-hero button {
     position: absolute;
     bottom: 25%;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 4px 4px;
     border: none;
     padding: 5px 50px;
+    cursor: pointer;
+}
+main .hero .text-hero button::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    height: 0px;
+    right: 0;
+    /* left: 0; */
+    width: 0%;
+    border-width: 16px 111px 0px 110.5px;
+    border-color: #00c2ff #cf0a0a00 #14b61000 #d10bd000;
+    border-style: solid;
 }
 main .hero .img-container {
     width: 100%;
@@ -423,6 +440,11 @@ main .hero .img-container img {
 .misiunea .container-images-colors .images div .btn-find {
     color: #fff;
     position: absolute;
+    cursor: pointer;
+    transition: color 225ms linear;
+}
+.misiunea .container-images-colors .images div .btn-find:hover {
+    color: #00c2ff;
 }
 .misiunea .container-images-colors .images div:nth-child(1) .btn-find {
     bottom: 33%;
@@ -735,8 +757,38 @@ footer .nav-footer p {
 }
 
 @media screen and (max-width: 767px) {
-    
+    main .hero .text-hero {
+        padding: 0 15px;
+    }
+    general-title-container{
+        padding: 0px 15px;
+    }
 }
+
+@media screen and (max-width: 650px) {
+    main .hero .img-container {
+        box-shadow: inset 0px 0px 50px 40px #000;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .general-title-container h2 {
+        font-size: 2.5rem;
+    }
+    .general-title-container h3 {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    main .hero .img-container {
+        box-shadow: inset 0px 0px 50px 10px #000;
+    }
+    main .hero .text-hero button {
+        bottom: 22%;
+    }
+}
+
 
 
 /* !Responsive it will hurt :)*/

@@ -70,11 +70,14 @@
                 <button type="button" class="general-buttons">Descoperă</button>
             </div>
             <div class="img-container">
-                <!-- todo de pus sourcest -->
-                <img src="./Assets/Images/wall-e-hero-image.jpg" alt="Imagine Hero" class="general-image" sizes="(max-width: 991px) 991px, (max-width: 1600px) 1600px" srcset="./Assets/Images/wall-e-hero-image-mobil.jpg 1172w, ./Assets/Images/wall-e-hero-image.jpg 1920w" width="1920" height="1280" loading="lazy">
+                <!-- <img src="./Assets/Images/wall-e-hero-image.jpg" alt="Imagine Hero" class="general-image" sizes="(max-width: 991px) 991px, (max-width: 1600px) 1600px" srcset="./Assets/Images/wall-e-hero-image-mobil.jpg 1172w, ./Assets/Images/wall-e-hero-image.jpg 1920w" width="1920" height="1280" loading="lazy"> -->
+                <picture>
+                    <source media="(max-width: 991px)" srcset="./Assets/Images/wall-e-hero-image-mobil.jpg">
+                    <source media="(max-width: 500px)" srcset="./Assets/Images/wall-e-hero-image-mobil-v2.jpg">
+                    <img src="./Assets/Images/wall-e-hero-image.jpg" alt="Imagine Hero" class="general-image" width="1920" height="1280" loading="lazy">
+                </picture>
             </div>
         </section>
-
 
         <section class="misiunea general-section">
             <div class="general-title-container">
@@ -130,6 +133,7 @@
             
             <button type="button" class="general-buttons">Află Misiunea</button>
         </section>
+        <!-- <div class="showNothing"> -->
 
         <section class="povestea general-section">
             <div class="general-title-container">
@@ -244,8 +248,9 @@
                 </div>
             </div>
         </section>
+<!-- </div> -->
     </main>
-
+    <!-- <div class="showNothing"> -->
     <footer>
         <div class="container-logo">
             <img src="Assets\SVGs\Future Minnds Robotics Drept Alb Negru.svg" alt="Logo Future Minds Robotics" width="280" height="160" loading="lazy">
@@ -377,6 +382,7 @@
             <p>&copy;2024 Future Minds Robotics. Toate drepturile rezervate.</p>
         </div>
     </footer>
+<!-- </div> -->
     
 </body>
 </html>
