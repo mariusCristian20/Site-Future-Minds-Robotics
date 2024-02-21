@@ -43,10 +43,12 @@
     font-weight: 400;
     line-height: 1.2;
     color: var(--color-font-black);
+    padding: 0 15px;
 }
 .general-title-container h3 {
     width: 60%;
-    margin: 30px auto 0;;
+    margin: 30px auto 0;
+    padding: 0 15px;
     text-align: center;
     font-family: 'Roboto Serif';
     font-size: 1.25rem;
@@ -64,7 +66,7 @@
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
-    padding: 70px 0;
+    padding: 70px 15px;
 }
 
 .colors { 
@@ -430,12 +432,11 @@ main .hero .img-container img {
     width: -moz-fit-content;
     width: fit-content;
     margin: 60px auto 0;
-    padding: 0 15px;
 }
 .misiunea .container-images-colors .images {
     display: grid;
     grid-template-rows: repeat(2, 0.4fr);
-    grid-template-columns: repeat(2, 0.8fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: auto;
 }
 .misiunea .container-images-colors .images div {
@@ -479,6 +480,18 @@ main .hero .img-container img {
     border-radius: 10px 0 0 10px;
     padding: 3px 12px;
     display: block;
+    position: relative;
+}
+
+.misiunea button::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    height: 0px;
+    border-width: 16px 0px 18px 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent #00c2ff;
 }
 
 /* *Main Section - Misiunea */
@@ -487,19 +500,19 @@ main .hero .img-container img {
 
 .povestea {
     background-color: #dedede;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    box-shadow: 0px 0px 6px 0px #676767;
 }
 
 .povestea .content {
-    margin: 30px 0;
-}
-.povestea .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 0;
 }
 .povestea .content p {
     font-family: 'Roboto Serif';
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.5;
     color: var(--color-font-black);
@@ -518,6 +531,17 @@ main .hero .img-container img {
     padding: 3px 10px;
     border-radius: 0 10px 10px 0;
     display: block;
+    position: relative;
+}
+.povestea button::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    height: 0px;
+    border-width: 16px 20px 19px 0px;
+    border-style: solid;
+    border-color: transparent #00c2ff transparent transparent;
 }
 
 /* *Main Section Povestea */
@@ -558,7 +582,7 @@ main .hero .img-container img {
 }
 .evenimente .container-events-colors .events-place .event a h4 {
     font-family: 'Roboto';
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2;
     text-transform: uppercase;
@@ -566,7 +590,7 @@ main .hero .img-container img {
 }
 .evenimente .container-events-colors .events-place .event a p {
     font-family: 'Roboto Serif';
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2;
     color: var(--color-font-white);
@@ -581,6 +605,17 @@ main .hero .img-container img {
     padding: 3px 10px;
     border-radius: 10px 0 0 10px;
     display: block;
+    position: relative;
+}
+.evenimente button::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    height: 0px;
+    border-width: 16px 0px 18px 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent #00c2ff;
 }
 
 /* *Main Section Evenimente */
@@ -589,6 +624,8 @@ main .hero .img-container img {
 /* *Main Section Multumire */
 .multumire {
     background-color: #dedede;
+    border-top: 1px solid #aaaaaa;
+    box-shadow: 0px -1px 6px -1px #676767;
 }
 
 .multumire .text-thanks {
@@ -681,6 +718,9 @@ footer .nav-footer p {
     line-height: 1.5;
     color: var(--color-font-black);
 }
+footer .exterior-copy {
+    display: none;
+}
 
 /* * Footer */
 
@@ -746,15 +786,21 @@ footer .nav-footer p {
         font-size: 1rem;
         max-width: 300px;
     }
+    footer {
+        padding: 20px 50px;
+    }
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 992px) {
     .open-nav-mobile {
         display: none!important;
     }
 }
 
 @media screen and (max-width: 991px) {
+    .general-title-container h3 {
+        width: 80%;
+    }
     header nav .nav-btn,
     header nav .nav-btn.explore {
         display: none;
@@ -766,14 +812,129 @@ footer .nav-footer p {
     main .hero .img-container {
         box-shadow: inset 0px 0px 50px 70px #000;
     }
+    .povestea .content {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        place-items: center;
+    }
+    .povestea .content .general-image {
+        width: 50%;
+    }
+    .povestea .content p{
+        text-align: center;
+    }
+    .povestea .content p:nth-child(1) {
+        grid-area: 1/1;
+    }
+    .povestea .content .general-image:nth-child(2) {
+        grid-area: 2/1;
+    }
+    .povestea .content p:nth-child(3) {
+        grid-area: 3/1;
+    }
+    .povestea .content .general-image:nth-child(4) {
+        grid-area: 4/1;
+    }
+    .povestea .content p:nth-child(5) {
+        grid-area: 5/1;
+    }
+    .povestea .content .general-image:nth-child(6) {
+        grid-area: 6/1;
+    }
+    .povestea .content p:nth-child(7) {
+        grid-area: 7/1;
+    }
+    .evenimente .container-events-colors .events-place .event a p {
+        font-size: 1rem;
+    }
+    .multumire .text-thanks {
+        flex-direction: column-reverse;
+    }
+    .multumire .text-thanks p {
+        font-size: 1.2rem;
+    }
+    .multumire .text-thanks .container-image {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 767px) {
     main .hero .text-hero {
         padding: 0 15px;
     }
-    general-title-container{
-        padding: 0px 15px;
+    .misiunea .container-images-colors .images {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 0.5fr);
+    }
+    .misiunea .container-images-colors .images div:nth-child(1) {
+        grid-area: 1/1;
+    }
+    .misiunea .container-images-colors .images div:nth-child(2) {
+        grid-area: 2/1;
+    }
+    .misiunea .container-images-colors .images div:nth-child(3) {
+        grid-area: 3/1;
+    }
+    .povestea .content .general-image {
+        width: 70%;
+    }
+    .povestea .content p{
+        font-size: 1rem;
+    }
+    .evenimente .container-events-colors .events-place {
+        grid-template-columns: 0.8fr;
+        place-content: center;
+        width: 100%;
+    }
+    .evenimente .container-events-colors .events-place .event:nth-child(1) {
+        grid-area: 1/1;
+    }
+    .evenimente .container-events-colors .events-place .event:nth-child(2) {
+        grid-area: 2/1;
+    }
+    .evenimente .container-events-colors .events-place .event:nth-child(3) {
+        grid-area: 3/1;
+    }
+    .evenimente .container-events-colors .events-place .event:nth-child(4) {
+        grid-area: 4/1;
+    }
+    .evenimente .container-events-colors .events-place .event:nth-child(5) {
+        grid-area: 5/1;
+    }
+    .multumire .text-thanks p {
+        font-size: 1rem;
+    }
+    .multumire .text-thanks .container-image .thk-btn {
+        top: unset;
+        bottom: 30%;
+        right: 0;
+        left: 0;
+        /* width: -moz-fit-content; */
+        width: fit-content;
+        height: min-content;
+    }
+    footer {
+        flex-direction: column-reverse;
+        padding: 20px 25px;
+    }
+    footer .nav-footer .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer .nav-footer .nav span {
+        padding-left: unset;
+        margin-left: unset;
+        border-left: unset;
+    }
+    footer .nav-footer .interior-copy {
+        display: none;
+    }
+    footer .exterior-copy {
+        font-size: 1rem;
+        text-align: center;
+        display: block;
     }
 }
 
@@ -788,7 +949,8 @@ footer .nav-footer p {
         font-size: 2.5rem;
     }
     .general-title-container h3 {
-        width: 85%;
+        width: 100%;
+        font-size: 1rem;
     }
 }
 
