@@ -16,14 +16,15 @@
 /* Variables */
 
 :root{
-    --color-font-wihte: #fff;
+    --color-font-black: #000;
+    --color-font-white: #fff;
     --width-full: 100%;
 }
 
 /* General Styling */
 
 .general-buttons {
-    color: var(--color-font-wihte);
+    color: var(--color-font-white);
     font-size: 1.5rem;
     font-family: 'Genos';
     line-height: 1.2;
@@ -32,6 +33,7 @@
     text-transform: uppercase;
     margin: 60px auto 0;
     border: none;
+    cursor: pointer;
 }
 
 .general-title-container h2 {
@@ -40,7 +42,7 @@
     font-size: 3rem;
     font-weight: 400;
     line-height: 1.2;
-    color: var(--color-font-wihte);
+    color: var(--color-font-black);
 }
 .general-title-container h3 {
     width: 60%;
@@ -50,7 +52,7 @@
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2;
-    color: var(--color-font-wihte);
+    color: var(--color-font-black);
 }
 .general-image {
     width: 100%;
@@ -61,7 +63,8 @@
 .general-section {
     max-width: 1300px;
     width: 100%;
-    margin: 70px auto;
+    margin: 0 auto;
+    padding: 70px 0;
 }
 
 .colors { 
@@ -131,7 +134,7 @@
 /* Body Styling */
 
 body {
-    background-color: #000;
+    background-color: #fff;
 }
 /* ? Pus din javascript */
 .un-scroll-body {
@@ -210,7 +213,7 @@ header nav img {
 }
 header nav .nav-btn,
 header .mobile-nav .nav-btn {
-    color: var(--color-font-wihte);
+    color: var(--color-font-white);
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 700;
@@ -279,7 +282,7 @@ header .mobile-nav.close-mobile {
 
 header .mobile-nav .open-nav-mobile {
     display: flex;
-    color: var(--color-font-wihte);
+    color: var(--color-font-white);
     position: absolute;
     right: -35px;
     top: 20%;
@@ -287,6 +290,7 @@ header .mobile-nav .open-nav-mobile {
     padding: 6px;
     border-radius: 0 20px 20px 0;
     box-shadow: 4px 0px 6px -2px #fff;
+    cursor: pointer;
 }
 header .mobile-nav .open-nav-mobile .open {
     transform: rotateZ(0deg);
@@ -371,7 +375,7 @@ main .hero .text-hero h1 {
     font-size: 4rem;
     font-weight: 500;
     line-height: 1.2;
-    color: var(--color-font-wihte);
+    color: var(--color-font-white);
 }
 main .hero .text-hero h2 {
     max-width: 650px;
@@ -381,7 +385,7 @@ main .hero .text-hero h2 {
     font-size: 2rem;
     font-weight: 400;
     line-height: 1.2;
-    color: var(--color-font-wihte);
+    color: var(--color-font-white);
     margin-top: 30px;
 }
 main .hero .text-hero button {
@@ -420,13 +424,13 @@ main .hero .img-container img {
 
 
 /* *Main Section - Misiunea */
-
 .misiunea .container-images-colors {
     display: flex;
     position: relative;
     width: -moz-fit-content;
     width: fit-content;
     margin: 60px auto 0;
+    padding: 0 15px;
 }
 .misiunea .container-images-colors .images {
     display: grid;
@@ -481,6 +485,10 @@ main .hero .img-container img {
 
 /* *Main Section Povestea */
 
+.povestea {
+    background-color: #dedede;
+}
+
 .povestea .content {
     margin: 30px 0;
 }
@@ -494,7 +502,7 @@ main .hero .img-container img {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
-    color: var(--color-font-wihte);
+    color: var(--color-font-black);
     padding: 20px;
     margin: auto;
 }
@@ -554,14 +562,14 @@ main .hero .img-container img {
     font-weight: 400;
     line-height: 1.2;
     text-transform: uppercase;
-    color: var(--color-font-wihte);
+    color: var(--color-font-white);
 }
 .evenimente .container-events-colors .events-place .event a p {
     font-family: 'Roboto Serif';
     font-size: 20px;
     font-weight: 400;
     line-height: 1.2;
-    color: var(--color-font-wihte);
+    color: var(--color-font-white);
     width: 90%;
     text-align: center;
 }
@@ -579,6 +587,9 @@ main .hero .img-container img {
 
 
 /* *Main Section Multumire */
+.multumire {
+    background-color: #dedede;
+}
 
 .multumire .text-thanks {
     display: flex;
@@ -606,7 +617,7 @@ main .hero .img-container img {
     font-size: 1.375rem;
     font-weight: 400;
     line-height: 1.5;
-    color: var(--color-font-wihte);
+    color: var(--color-font-black);
     width: 100%;
     text-align: center;
 }
@@ -620,7 +631,8 @@ footer {
     justify-content: flex-start;
     align-items: center;
     padding: 20px 100px;
-    border-top: 3px solid #fff;
+    border-top: 1px solid #aaaaaa;
+    box-shadow: 0px -1px 6px -1px #676767;
 }
 
 footer .nav-footer {
@@ -642,7 +654,7 @@ footer .nav-footer .social-media svg:first-child {
 footer .nav-footer .nav span {
     padding-left: 18px;
     margin-left: 18px;
-    border-left: 2px solid #fff;
+    border-left: 2px solid #000;
 }
 footer .nav-footer .nav span:first-child {
     padding-left: 0;
@@ -654,7 +666,7 @@ footer .nav-footer .nav span a {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
-    color: var(--color-font-wihte);
+    color: var(--color-font-black);
     text-transform: uppercase;
     text-decoration: none;
     transition: text-shadow .255s linear;
@@ -667,7 +679,7 @@ footer .nav-footer p {
     font-size: 1.375rem;
     font-weight: 400;
     line-height: 1.5;
-    color: var(--color-font-wihte);
+    color: var(--color-font-black);
 }
 
 /* * Footer */
